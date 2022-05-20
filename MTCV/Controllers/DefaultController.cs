@@ -18,7 +18,13 @@ namespace MTCV.Controllers
         }
         public PartialViewResult Experience()
         {
-            return PartialView();
+            var degerler = db.experiences.ToList();
+            return PartialView(degerler);
+        }
+        public PartialViewResult Education()
+        {
+            var degerler = db.educations.ToList();
+            return PartialView(degerler);
         }
     }
 }

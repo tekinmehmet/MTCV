@@ -10,9 +10,9 @@ namespace MTCV.Models.ENTITY
     {
         [Key]
         public int ID { get; set; }
-        [StringLength(100)]
+        [StringLength(1000)]
         public string DESC1 { get; set; }
-        [StringLength(100)]
+        [StringLength(500)]
         public string DESC2 { get; set; }
 
     }

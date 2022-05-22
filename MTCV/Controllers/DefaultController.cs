@@ -18,13 +18,42 @@ namespace MTCV.Controllers
         }
         public PartialViewResult Experience()
         {
-            var degerler = db.experiences.ToList();
-            return PartialView(degerler);
+            var deneyimler = db.experiences.ToList();
+            return PartialView(deneyimler);
         }
         public PartialViewResult Education()
         {
-            var degerler = db.educations.ToList();
-            return PartialView(degerler);
+            var egitim = db.educations.ToList();
+            return PartialView(egitim);
+        }
+        public PartialViewResult Skill()
+        {
+            var yetenekler = db.skills.ToList();
+            return PartialView(yetenekler);
+        }
+        public PartialViewResult Interest()
+        {
+            var hobi = db.Interests.ToList();
+            return PartialView(hobi);
+        }
+        public PartialViewResult Award()
+        {
+            var sertifikalar = db.Awards.ToList();
+            return PartialView(sertifikalar);
+        }
+        [HttpGet]
+        public PartialViewResult Contact()
+        {
+            
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Contact(Contact contact)
+        {
+            contact.DATE = DateTime.Today.ToString();
+            db.contacts.Add(contact);
+            db.SaveChanges();
+            return PartialView();
         }
     }
 }

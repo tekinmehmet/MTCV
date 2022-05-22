@@ -17,6 +17,8 @@ namespace MTCV.Models.ENTITY
         [StringLength(100)]
         public string SUBJECT { get; set; }
         [StringLength(1000)]
+        public string MESSAGE { get; set; }
+        [StringLength(100)]
         public string DATE { get; set; }
        
        

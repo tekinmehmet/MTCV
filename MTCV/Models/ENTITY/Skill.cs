@@ -12,6 +12,8 @@ namespace MTCV.Models.ENTITY
         public int ID { get; set; }
         [StringLength(100)]
         public string SKILL { get; set; }
+       
+        public byte Oran { get; set; }
 
     }
 }

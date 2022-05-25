@@ -1,0 +1,27 @@
+﻿@model MTCV.Models.ENTITY.Experience
+@{
+    ViewBag.Title = "ExperienceUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<form method="post">
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.HEAD, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.SUBHEAD, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.DESCRIPTION,new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.DATE, new { @class = "form-control" })
+    <br />
+    <button class=" btn btn-info">Güncelle</button>
+</form>
+

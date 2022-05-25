@@ -12,6 +12,8 @@ namespace MTCV.Models.ENTITY
         public int ID { get; set; }
         [StringLength(1000)]
         public string DESCRIPTION { get; set; }
-       
+        [StringLength(20)]
+        public string DATE { get; set; }
+
     }
 }

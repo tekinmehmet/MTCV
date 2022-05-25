@@ -10,7 +10,7 @@ namespace MTCV.Models.ENTITY
     {
         [Key]
         public int ID { get; set; }
-        [StringLength(100)]
+        [StringLength(100)]/*[Required(ErrorMessage ="Bu alanı boş geçemezsiniz.")]*/
         public string HEAD { get; set; }
         [StringLength(100)]
         public string SUBHEAD { get; set; }
